@@ -1,0 +1,69 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'LCLK'
+Slack : 0.174
+TNS   : 0.000
+
+Type  : Setup 'pll_200:PLL_IO|altpll:altpll_component|_clk0'
+Slack : 0.209
+TNS   : 0.000
+
+Type  : Setup 'I3'
+Slack : 22.753
+TNS   : 0.000
+
+Type  : Setup 'I2'
+Slack : 24.027
+TNS   : 0.000
+
+Type  : Hold 'LCLK'
+Slack : 0.633
+TNS   : 0.000
+
+Type  : Hold 'I2'
+Slack : 0.673
+TNS   : 0.000
+
+Type  : Hold 'I3'
+Slack : 0.673
+TNS   : 0.000
+
+Type  : Hold 'pll_200:PLL_IO|altpll:altpll_component|_clk0'
+Slack : 0.793
+TNS   : 0.000
+
+Type  : Recovery 'pll_200:PLL_IO|altpll:altpll_component|_clk0'
+Slack : 0.643
+TNS   : 0.000
+
+Type  : Recovery 'LCLK'
+Slack : 16.694
+TNS   : 0.000
+
+Type  : Removal 'pll_200:PLL_IO|altpll:altpll_component|_clk0'
+Slack : 4.114
+TNS   : 0.000
+
+Type  : Removal 'LCLK'
+Slack : 4.448
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'pll_200:PLL_IO|altpll:altpll_component|_clk0'
+Slack : 1.266
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'I2'
+Slack : 11.266
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'I3'
+Slack : 11.266
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'LCLK'
+Slack : 11.266
+TNS   : 0.000
+
+------------------------------------------------------------

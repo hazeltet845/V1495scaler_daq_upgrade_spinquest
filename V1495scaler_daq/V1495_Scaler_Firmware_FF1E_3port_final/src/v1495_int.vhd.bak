@@ -1,0 +1,38 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+entity v1495_int is 
+port(
+	clk_KHZ  : in std_logic; -- 7.5 KHz clock from clock divider
+	EOS      : in std_logic;
+	enable   : in std_logic;
+	int      : out std_logic
+	);
+end v1495_int;
+
+architecture int_arch of v1495_int is
+
+signal edge_EOS : std_logic := '0'; 
+	
+component edge_detector is 
+   port(
+	clk   : in std_logic;
+	pulse_in : in std_logic;
+	edge  : out std_logic
+	);
+end component edge_detector;
+	
+	
+begin
+	
+	int <= (clk_KHZ and enable) or edge_EOS; 
+	
+	
+	I0: edge_detector
+	port map(
+	clk => clk_KHZ,
+	pulse_in => EOS,
+	edge => edge_EOS);
+	
+	
+end int_arch;

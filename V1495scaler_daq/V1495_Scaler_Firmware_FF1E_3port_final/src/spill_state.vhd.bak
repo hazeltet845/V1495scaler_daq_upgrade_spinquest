@@ -1,0 +1,50 @@
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.numeric_std.all;
+
+entity spill_state is
+  port (
+    BOS      : in  std_logic;
+    EOS      : in  std_logic;
+    enable   : out  std_logic
+    );
+end spill_state;
+
+architecture arch of spill_state is
+
+	type state is (IDLE_s,SPILL_s);
+	signal current_state : state := IDLE_s;
+	signal next_state : state := IDLE_s;
+	
+   
+begin
+
+process(current_state) 
+begin
+case current_state is
+   when IDLE_s =>
+     enable <= '0';	
+   when SPILL_s =>
+      enable <= '1';
+end case;
+end process;
+
+
+state_pro: process(BOS,EOS)
+begin 
+
+	if(BOS = '1') then
+		next_state <= SPILL_s;
+	elsif(EOS = '1') then
+		next_state <= IDLE_s;
+	else
+		next_state <= next_state;
+	end if;
+
+end process state_pro;
+
+current_state <= next_state;
+
+ 
+end arch;

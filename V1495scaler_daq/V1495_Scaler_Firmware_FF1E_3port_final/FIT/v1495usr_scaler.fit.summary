@@ -1,0 +1,12 @@
+Fitter Status : Successful - Tue Aug 09 14:42:11 2022
+Quartus II Version : 10.0 Build 218 06/27/2010 SJ Web Edition
+Revision Name : v1495usr_scaler
+Top-level Entity Name : v1495usr_scaler
+Family : Cyclone
+Device : EP1C20F400C6
+Timing Models : Final
+Total logic elements : 6,511 / 20,060 ( 32 % )
+Total pins : 275 / 301 ( 91 % )
+Total virtual pins : 0
+Total memory bits : 0 / 294,912 ( 0 % )
+Total PLLs : 1 / 2 ( 50 % )

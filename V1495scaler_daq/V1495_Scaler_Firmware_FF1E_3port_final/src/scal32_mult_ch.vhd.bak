@@ -1,0 +1,59 @@
+-------------------------------------------------------------------------------
+-- General reusable Scalar/Counter 
+-- Ethan Hazelton
+--
+-- Description: Used to loop scalar_single_ch in order to implement scalar 
+-- for each channel
+-------------------------------------------------------------------------------
+ 
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.std_logic_arith.all;
+USE ieee.std_logic_misc.all;
+USE ieee.std_logic_unsigned.all;
+
+LIBRARY work;
+USE work.v1495scalar_pkg.all;
+
+entity scalar32_mult_ch is
+  generic(
+	 ch_num : integer := 32
+  );
+  port (
+    clk            : in std_logic;
+    input_vec      : in std_logic_vector(ch_num -1 downto 0);
+    reset          : in std_logic;
+    enable         : in std_logic;
+    count_data_arr : out  arr32(ch_num - 1 downto 0)
+ 
+    );
+end scalar32_mult_ch;
+
+architecture scalar_log of scalar32_mult_ch is
+
+component scalar_single_ch is
+  generic (
+    scal_width: integer := 32
+  );
+  port (
+    clk        : in  std_logic;
+    input      : in  std_logic;
+    reset      : in std_logic;
+    enable     : in std_logic;
+    count_data : out  std_logic_vector(scal_width-1 downto 0)
+    );
+end component;
+  
+begin
+ 
+	ch_loop: for i in 0 to ch_num-1 generate
+	 ch_i: scalar_single_ch
+	  PORT MAP(
+	   clk   => clk,
+      input => input_vec(i),
+      enable => enable,
+      reset => reset,
+      count_data	 => count_data_arr(i));
+	end generate ch_loop;
+ 
+end scalar_log;

@@ -1,0 +1,96 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 20.276 ns
+From           : nADS
+To             : v1495_reference:I0|REG_DOUT[12]
+From Clock     : --
+To Clock       : LCLK
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : -0.443 ns
+Required Time  : 10.000 ns
+Actual Time    : 10.443 ns
+From           : v1495_reference:I0|REG_DOUT[2]
+To             : LAD[2]
+From Clock     : LCLK
+To Clock       : --
+Failed Paths   : 5
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 18.560 ns
+From           : IDE[2]
+To             : E[2]
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 3.563 ns
+From           : GIN[1]
+To             : v1495_reference:I0|v1495_int:INT|edge_detector:I0|reg1
+From Clock     : --
+To Clock       : LCLK
+Failed Paths   : 0
+
+Type           : Clock Setup: 'LCLK'
+Slack          : -5.149 ns
+Required Time  : 50.00 MHz ( period = 20.000 ns )
+Actual Time    : N/A
+From           : v1495_reference:I0|scal32_mult_ch:A_SCALER_IO|scal_single_ch:\ch_loop:29:ch_i|r_CNT[19]
+To             : v1495_reference:I0|REG_DOUT[3]
+From Clock     : v1495_reference:I0|pll_200:PLL_IO|altpll:altpll_component|_clk0
+To Clock       : LCLK
+Failed Paths   : 4114
+
+Type           : Clock Setup: 'v1495_reference:I0|pll_200:PLL_IO|altpll:altpll_component|_clk0'
+Slack          : -3.928 ns
+Required Time  : 250.00 MHz ( period = 4.000 ns )
+Actual Time    : N/A
+From           : v1495_reference:I0|SCALER_EN_VME
+To             : v1495_reference:I0|scal32_mult_ch:A_SCALER_IO|scal_single_ch:\ch_loop:7:ch_i|r_CNT[31]
+From Clock     : LCLK
+To Clock       : v1495_reference:I0|pll_200:PLL_IO|altpll:altpll_component|_clk0
+Failed Paths   : 13884
+
+Type           : Clock Hold: 'LCLK'
+Slack          : -1.947 ns
+Required Time  : 50.00 MHz ( period = 20.000 ns )
+Actual Time    : N/A
+From           : v1495_reference:I0|clk_divider:KHZ_CLK|temp
+To             : v1495_reference:I0|v1495_int:INT|edge_detector:I1|reg1
+From Clock     : LCLK
+To Clock       : LCLK
+Failed Paths   : 1
+
+Type           : Clock Hold: 'v1495_reference:I0|pll_200:PLL_IO|altpll:altpll_component|_clk0'
+Slack          : 0.673 ns
+Required Time  : 250.00 MHz ( period = 4.000 ns )
+Actual Time    : N/A
+From           : v1495_reference:I0|scal32_mult_ch:B_SCALER_IO|scal_single_ch:\ch_loop:28:ch_i|edge_detector:I0|reg1
+To             : v1495_reference:I0|scal32_mult_ch:B_SCALER_IO|scal_single_ch:\ch_loop:28:ch_i|edge_detector:I0|reg2
+From Clock     : v1495_reference:I0|pll_200:PLL_IO|altpll:altpll_component|_clk0
+To Clock       : v1495_reference:I0|pll_200:PLL_IO|altpll:altpll_component|_clk0
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 18004
+
+--------------------------------------------------------------------------------------
+

@@ -1,0 +1,94 @@
+EDA Netlist Writer report for v1495usr_scaler
+Tue Aug 09 14:42:28 2022
+Quartus II Version 10.0 Build 218 06/27/2010 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. EDA Netlist Writer Summary
+  3. Simulation Settings
+  4. Simulation Generated Files
+  5. EDA Netlist Writer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------+
+; EDA Netlist Writer Summary                                        ;
++---------------------------+---------------------------------------+
+; EDA Netlist Writer Status ; Successful - Tue Aug 09 14:42:28 2022 ;
+; Revision Name             ; v1495usr_scaler                       ;
+; Top-level Entity Name     ; v1495usr_scaler                       ;
+; Family                    ; Cyclone                               ;
+; Simulation Files Creation ; Successful                            ;
++---------------------------+---------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Simulation Settings                                                                                                        ;
++---------------------------------------------------------------------------------------------------+------------------------+
+; Option                                                                                            ; Setting                ;
++---------------------------------------------------------------------------------------------------+------------------------+
+; Tool Name                                                                                         ; ModelSim-Altera (VHDL) ;
+; Generate netlist for functional simulation only                                                   ; Off                    ;
+; Time scale                                                                                        ; 1 ps                   ;
+; Truncate long hierarchy paths                                                                     ; Off                    ;
+; Map illegal HDL characters                                                                        ; Off                    ;
+; Flatten buses into individual nodes                                                               ; Off                    ;
+; Maintain hierarchy                                                                                ; Off                    ;
+; Bring out device-wide set/reset signals as ports                                                  ; Off                    ;
+; Enable glitch filtering                                                                           ; Off                    ;
+; Do not write top level VHDL entity                                                                ; Off                    ;
+; Disable detection of setup and hold time violations in the input registers of bi-directional pins ; Off                    ;
+; Architecture name in VHDL output netlist                                                          ; structure              ;
+; Generate third-party EDA tool command script for RTL functional simulation                        ; Off                    ;
+; Generate third-party EDA tool command script for gate-level simulation                            ; Off                    ;
++---------------------------------------------------------------------------------------------------+------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                                                                                                                                ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                                                                                                                           ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware_bare/V1495_Scaler_Firmware_FF1E_3port_final/FIT/simulation/modelsim/v1495usr_scaler.vho     ;
+; C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware_bare/V1495_Scaler_Firmware_FF1E_3port_final/FIT/simulation/modelsim/v1495usr_scaler_vhd.sdo ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------+
+; EDA Netlist Writer Messages ;
++-----------------------------+
+Info: *******************************************************************
+Info: Running Quartus II EDA Netlist Writer
+    Info: Version 10.0 Build 218 06/27/2010 SJ Web Edition
+    Info: Processing started: Tue Aug 09 14:42:25 2022
+Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off v1495usr_scaler -c v1495usr_scaler
+Info: Generated files "v1495usr_scaler.vho" and "v1495usr_scaler_vhd.sdo" in directory "C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware_bare/V1495_Scaler_Firmware_FF1E_3port_final/FIT/simulation/modelsim/" for EDA simulation tool
+Info: Quartus II EDA Netlist Writer was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 233 megabytes
+    Info: Processing ended: Tue Aug 09 14:42:28 2022
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
+
+

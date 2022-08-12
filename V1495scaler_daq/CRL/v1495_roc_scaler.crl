@@ -1,0 +1,190 @@
+#
+#  General User readout list, for testing
+#
+#    David Abbott, TJNAF 2000
+
+readout list GEN_USER
+maximum 51200,2000
+general readout
+
+const NV1495 = 4;
+int V_DELAY;
+
+int event_no;
+int event_ty;
+extern int bigendian_out;
+extern unsigned int vxTicks;
+
+int ii;
+int totalhits = 0;
+int int_counter = 0;
+int event_no_prev = 0;
+int x = 0;
+
+begin download
+
+  //s3610Init(TRIG_ADDR, 0, 0);
+
+  # When sending to a Linux Host set bigendian_out = 0
+  bigendian_out = 0;
+
+%%
+ v1495Init(0x04000000); 
+%%
+
+  log inform "User Download Executed"
+end download
+
+begin prestart
+  log inform "Entering User Prestart"
+  log inform "V1495 Interrupt"
+
+  init trig source GEN
+  link async trig source GEN 1 to usrtrig and usrtrig_done
+  event type 1 then read GEN 1
+
+  log inform "User Prestart Executed"
+  log inform "Send PreStart Info Event"
+
+  rol->dabufp = (long*)0;
+  UEOPEN(132, BT_UI4, 0);
+  UECLOSE;
+end prestart
+
+begin end
+
+  log inform "User End Executed"
+  logMsg("events: %d\n", *rol->nevents);
+  CDODISABLE(GEN, 1, 1);
+end end
+
+begin pause
+  log inform "User Pause Executed"
+  CDODISABLE(GEN, 1, 1);
+end pause
+
+begin go
+  log inform "Entering User Go"
+  CDOENABLE(GEN, 1, 1);
+  //s3610Status(0, 0);
+%%
+//for (ii=0;ii<NV1495;ii++){ 
+  // v1495Run(ii);
+//}
+
+%%
+
+  log inform "Finished User Go"
+end go
+
+begin trigger usrtrig
+  variable ii, j,loop,loop2,loop3,loop4,loop5, TmpV1495Count
+
+  event_ty = EVTYPE;
+  event_no = *rol->nevents;
+  rol->dabufp = (long*)0;
+  open event type EVTYPE of BT_UI4
+  open bank EVTYPE of BT_UI4
+
+  ## turn sis3610 BUSY on
+  //s3610WriteBits(0, 1);
+  # log inform "EVTYPE %d",EVTYPE
+
+  *rol->dabufp++ = vxTicks;
+  *rol->dabufp++ = 0xe906f005;
+  *rol->dabufp++ = event_no;
+
+%%
+  
+int_counter = (int)v1495IntCount();
+
+  if (event_no != event_no_prev){
+    x += 1;
+    event_no_prev = event_no;
+  }
+
+  if (int_counter != x){
+   if(x < int_counter){
+     logMsg("Missed Interrupt after event %d (%d) \n ", event_no, x);
+     logMsg("interrupt #: %d \n",int_counter); 
+   }
+   x = int_counter;
+  }
+  
+
+  *rol->dabufp++ = int_counter;
+  *rol->dabufp++ = 0xe906f005;
+  *rol->dabufp++ = event_ty;
+  loop = Loop_determine();
+  loop2 = Loop_determine();
+  loop3 = Loop_determine();
+  loop4 = Loop_determine();
+  loop5 = Loop_determine();
+
+  if (event_ty == 1 ) {
+   *rol->dabufp++ = 0xAAAAAAAA;
+   *rol->dabufp++ = 0xAAAAAAAA;
+   *rol->dabufp++ = 0xAAAAAAAA;
+   *rol->dabufp++ = 0xAAAAAAAA;
+   for(j = 48; j < 64; j+=2){
+    *rol->dabufp++ = v1495ScalerCodaRead(1,j);
+   }
+  }else if(event_ty = 2){
+   *rol->dabufp++ = 0xAAAAAAAA;
+   *rol->dabufp++ = 0xAAAAAAAA;
+   *rol->dabufp++ = 0xAAAAAAAA;
+   *rol->dabufp++ = 0xAAAAAAAA;
+   for(j = 0; j < 64; j+=2){
+    *rol->dabufp++ = v1495ScalerCodaRead(1,j);
+   }
+
+   *rol->dabufp++ = 0xBBBBBBBB;
+   *rol->dabufp++ = 0xBBBBBBBB;
+   *rol->dabufp++ = 0xBBBBBBBB;
+   *rol->dabufp++ = 0xBBBBBBBB;
+   for(j = 0; j < 64; j+=2){
+    *rol->dabufp++ = v1495ScalerCodaRead(2,j);
+   }
+  
+   *rol->dabufp++ = 0xDDDDDDDD;
+   *rol->dabufp++ = 0xDDDDDDDD;
+   *rol->dabufp++ = 0xDDDDDDDD;
+   *rol->dabufp++ = 0xDDDDDDDD;
+   for(j = 0; j < 64; j+=2){
+    *rol->dabufp++ = v1495ScalerCodaRead(3,j);
+   }
+
+   *rol->dabufp++ = 0xEEEEEEEE;
+   *rol->dabufp++ = 0xEEEEEEEE; 
+   *rol->dabufp++ = 0xEEEEEEEE;
+   *rol->dabufp++ = 0xEEEEEEEE;
+   for(j = 0; j < 64; j+=2){
+    *rol->dabufp++ = v1495ScalerCodaRead(4,j);
+   }
+  }
+  //*rol->dabufp++ = v1495TDCReadout(ii, jj);
+
+  *rol->dabufp++ =0xe906c0da; 
+%%
+
+  close bank
+  close event
+end trigger
+
+begin done usrtrig
+%%
+  //for(ii = 0; ii < NV1495; ++ii){
+    //v1495Run(ii);
+  //}
+%%
+end done
+
+begin done
+  # Re-enable Trigger Source here
+  //s3610IntAck(TRIG_INPUT);
+  v1495IntEnable();
+end done
+
+begin status
+
+end status

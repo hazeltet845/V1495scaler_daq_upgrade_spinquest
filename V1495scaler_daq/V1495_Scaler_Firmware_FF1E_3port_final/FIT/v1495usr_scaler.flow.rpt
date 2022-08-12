@@ -1,0 +1,142 @@
+Flow report for v1495usr_scaler
+Tue Aug 09 14:42:28 2022
+Quartus II Version 10.0 Build 218 06/27/2010 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------+
+; Flow Summary                                                       ;
++-------------------------+------------------------------------------+
+; Flow Status             ; Successful - Tue Aug 09 14:42:28 2022    ;
+; Quartus II Version      ; 10.0 Build 218 06/27/2010 SJ Web Edition ;
+; Revision Name           ; v1495usr_scaler                          ;
+; Top-level Entity Name   ; v1495usr_scaler                          ;
+; Family                  ; Cyclone                                  ;
+; Device                  ; EP1C20F400C6                             ;
+; Timing Models           ; Final                                    ;
+; Met timing requirements ; N/A                                      ;
+; Total logic elements    ; 6,511 / 20,060 ( 32 % )                  ;
+; Total pins              ; 275 / 301 ( 91 % )                       ;
+; Total virtual pins      ; 0                                        ;
+; Total memory bits       ; 0 / 294,912 ( 0 % )                      ;
+; Total PLLs              ; 1 / 2 ( 50 % )                           ;
++-------------------------+------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 08/09/2022 14:40:03 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; v1495usr_scaler     ;
++-------------------+---------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                                                                                                         ;
++----------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+-------------+--------------------+
+; Assignment Name                              ; Value                                                                                                                                 ; Default Value                  ; Entity Name ; Section Id         ;
++----------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+-------------+--------------------+
+; COMPILER_SIGNATURE_ID                        ; 154880082472313.166007040312220                                                                                                       ; --                             ; --          ; --                 ;
+; CYCLONE_OPTIMIZATION_TECHNIQUE               ; Speed                                                                                                                                 ; Balanced                       ; --          ; --                 ;
+; EDA_DESIGN_INSTANCE_NAME                     ; NA                                                                                                                                    ; --                             ; --          ; v1495_reference_tb ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH         ; v1495_reference_tb                                                                                                                    ; --                             ; --          ; eda_simulation     ;
+; EDA_OUTPUT_DATA_FORMAT                       ; Vhdl                                                                                                                                  ; --                             ; --          ; eda_simulation     ;
+; EDA_SIMULATION_TOOL                          ; ModelSim-Altera (VHDL)                                                                                                                ; <None>                         ; --          ; --                 ;
+; EDA_TEST_BENCH_ENABLE_STATUS                 ; TEST_BENCH_MODE                                                                                                                       ; --                             ; --          ; eda_simulation     ;
+; EDA_TEST_BENCH_FILE                          ; ../test_bench/v1495_reference_tb.vhd                                                                                                  ; --                             ; --          ; v1495_reference_tb ;
+; EDA_TEST_BENCH_MODULE_NAME                   ; v1495_reference_tb                                                                                                                    ; --                             ; --          ; v1495_reference_tb ;
+; EDA_TEST_BENCH_NAME                          ; v1495_reference_tb                                                                                                                    ; --                             ; --          ; eda_simulation     ;
+; ENABLE_DRC_SETTINGS                          ; On                                                                                                                                    ; Off                            ; --          ; --                 ;
+; INCREMENTAL_COMPILATION                      ; Off                                                                                                                                   ; FULL_INCREMENTAL_COMPILATION   ; --          ; --                 ;
+; IP_TOOL_NAME                                 ; ALTPLL                                                                                                                                ; --                             ; --          ; --                 ;
+; IP_TOOL_VERSION                              ; 10.0                                                                                                                                  ; --                             ; --          ; --                 ;
+; MISC_FILE                                    ; C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/V1495_Scaler_Firmware/V1495_Scaler_Firmware/FIT/v1495usr_scalar_project.dpf         ; --                             ; --          ; --                 ;
+; MISC_FILE                                    ; C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/FIT/v1495usr_scaler.dpf ; --                             ; --          ; --                 ;
+; MISC_FILE                                    ; ../src/pll_200.cmp                                                                                                                    ; --                             ; --          ; --                 ;
+; MISC_FILE                                    ; ../src/pll_200.ppf                                                                                                                    ; --                             ; --          ; --                 ;
+; OPTIMIZE_HOLD_TIMING                         ; All Paths                                                                                                                             ; IO Paths and Minimum TPD Paths ; --          ; --                 ;
+; PHYSICAL_SYNTHESIS_COMBO_LOGIC               ; On                                                                                                                                    ; Off                            ; --          ; --                 ;
+; PHYSICAL_SYNTHESIS_REGISTER_DUPLICATION      ; On                                                                                                                                    ; Off                            ; --          ; --                 ;
+; PHYSICAL_SYNTHESIS_REGISTER_RETIMING         ; On                                                                                                                                    ; Off                            ; --          ; --                 ;
+; ROUTER_LCELL_INSERTION_AND_LOGIC_DUPLICATION ; On                                                                                                                                    ; Auto                           ; --          ; --                 ;
+; ROUTER_TIMING_OPTIMIZATION_LEVEL             ; MAXIMUM                                                                                                                               ; Normal                         ; --          ; --                 ;
+; SMART_RECOMPILE                              ; On                                                                                                                                    ; Off                            ; --          ; --                 ;
+; USE_TIMEQUEST_TIMING_ANALYZER                ; On                                                                                                                                    ; Off                            ; --          ; --                 ;
++----------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+-------------+--------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:21     ; 1.0                     ; 295 MB              ; 00:00:21                           ;
+; Fitter                    ; 00:01:46     ; 1.0                     ; 354 MB              ; 00:01:36                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 275 MB              ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:06     ; 1.0                     ; 250 MB              ; 00:00:04                           ;
+; Design Assistant          ; 00:00:03     ; 1.0                     ; 257 MB              ; 00:00:03                           ;
+; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 225 MB              ; 00:00:03                           ;
+; Total                     ; 00:02:22     ; --                      ; --                  ; 00:02:09                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                            ;
++---------------------------+------------------+---------------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name       ; OS Version ; Processor type ;
++---------------------------+------------------+---------------+------------+----------------+
+; Analysis & Synthesis      ; PHYS-LORENZON1D  ; Windows Vista ; 6.2        ; x86_64         ;
+; Fitter                    ; PHYS-LORENZON1D  ; Windows Vista ; 6.2        ; x86_64         ;
+; Assembler                 ; PHYS-LORENZON1D  ; Windows Vista ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; PHYS-LORENZON1D  ; Windows Vista ; 6.2        ; x86_64         ;
+; Design Assistant          ; PHYS-LORENZON1D  ; Windows Vista ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; PHYS-LORENZON1D  ; Windows Vista ; 6.2        ; x86_64         ;
++---------------------------+------------------+---------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off v1495usr_scaler -c v1495usr_scaler
+quartus_fit --read_settings_files=off --write_settings_files=off v1495usr_scaler -c v1495usr_scaler
+quartus_asm --read_settings_files=off --write_settings_files=off v1495usr_scaler -c v1495usr_scaler
+quartus_sta v1495usr_scaler -c v1495usr_scaler
+quartus_drc --read_settings_files=off --write_settings_files=off v1495usr_scaler -c v1495usr_scaler
+quartus_eda --read_settings_files=off --write_settings_files=off v1495usr_scaler -c v1495usr_scaler
+
+
+
