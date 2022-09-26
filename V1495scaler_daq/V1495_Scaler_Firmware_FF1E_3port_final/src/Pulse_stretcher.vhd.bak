@@ -1,0 +1,51 @@
+--Ethan Hazelton: -------------------------------------------------------------
+--Generates pulse sent out of output(LVDS format) on DE2-115 Fpga board  ------
+-- Pulse period: 5x clock cycle
+-------------------------------------------------------------------------------
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.numeric_std.all;
+
+LIBRARY work;
+USE work.v1495scaler_pkg.all;
+
+
+entity Pulse_stretcher is
+generic(
+	ch_num0 : integer := 32
+);
+ port(
+  clk       : in std_logic;
+  pulse_in  : in std_logic_vector(ch_num0 - 1 downto 0);
+  pulse_out : out std_logic_vector(ch_num0 - 1 downto 0)
+  );
+end entity;
+
+architecture arch of Pulse_stretcher is
+
+ type cycle_arr is array(0 to ch_num0 - 1) of std_logic_vector(clk_cycles - 1 downto 0);
+ signal cy_mem : cycle_arr := (others => (others => '0'));
+ 
+  
+begin
+
+delay: process(clk) is
+	begin
+		if (rising_edge(clk)) then 
+			for i in 0 to ch_num0 -1  loop
+			cy_mem(i)(0) <= pulse_in(i);
+			for j in clk_cycles-1 downto 1 loop 
+				cy_mem(i)(j)<= cy_mem(i)(j-1);
+			end loop;
+		end loop;
+		end if;
+		
+		for i in ch_num0 -1 downto 0 loop
+			pulse_out(i)<= reductive_or(cy_mem(i));
+		end loop;
+		
+	end process delay;
+
+
+  
+end architecture;

@@ -1,0 +1,408 @@
+-- ****************************************************************************
+-- Company:         CAEN SpA - Viareggio - Italy
+-- Model:           V1495 -  Multipurpose Programmable Trigger Unit
+-- FPGA Proj. Name: V1495USR_DEMO
+-- Device:          ALTERA EP1C4F400C6
+-- Author:          Luca Colombini (l.colombini@caen.it)
+-- Date:            02-03-2006
+-- ----------------------------------------------------------------------------
+-- Module:          COIN_REFERENCE
+-- Description:     Reference design to use the V1495 board 
+--                  as a Coincidence Unit & I/O Register. 
+--                  A gate pulse is generated on G port when a data 
+--                  patterns on input ports A and B satisfy a trigger condition.
+--                  The trigger condition implemented in this reference design
+--                  is true when a bit-per-bit logic operation on port A and B 
+--                  is true. The logic operator applied to Port A and B is
+--                  selectable by means of a register bit (MODE Register Bit 4).
+--                  If MODE bit 4 is set to '0', an AND logic operation is applied
+--                  to corresponding bits in Port A and B.
+--                  (i.e. A(0) AND B(0), A(1) AND B(1) etc.). 
+--                  In this case, a trigger is generated if corresponding A and B
+--                  port bits are '1' at the same time.
+--                  If MODE bit 4 is set to '1', an OR logic operation is applied
+--                  to corresponding bits in Port A and B.
+--                  (i.e. A(0) OR B(0), A(1) OR B(1) etc.)
+--                  In this case, a trigger is generated if there is a '1' on one
+--                  bit of either port A or B.
+--                  Port A and B bits can be singularly masked through a register,
+--                  so that a '1' on that bit doesn't generate any trigger.
+--                  Expansion mezzanine cards can be directly controlled through
+--                  registers already implemented in this design.
+--                  The expansion mezzanine is identified by a unique 
+--                  identification code that can be read through a register.
+-- ****************************************************************************
+
+-- ############################################################################
+-- Revision History:
+--   Date         Author          Revision             Comments
+--   02 Mar 06    LC              1.0                  Creation
+-- ############################################################################
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.std_logic_arith.all;
+USE ieee.std_logic_unsigned.all;
+USE ieee.std_logic_misc.all;  -- Use OR_REDUCE function
+
+USE work.v1495scaler_pkg.all;
+
+ENTITY scal_reference IS
+   PORT( 
+      nLBRES      : IN     std_logic;                       -- Async Reset (active low)
+      LCLK        : IN     std_logic;                       -- Local Bus Clock
+      --*************************************************
+      -- REGISTER INTERFACE
+      --*************************************************
+      REG_WREN    : IN     std_logic;                       -- Write pulse (active high)
+      REG_RDEN    : IN     std_logic;                       -- Read  pulse (active high)
+      REG_ADDR    : IN     std_logic_vector (15 DOWNTO 0);  -- Register address
+      REG_DIN     : IN     std_logic_vector (15 DOWNTO 0);  -- Data from CAEN Local Bus
+      REG_DOUT    : OUT    std_logic_vector (15 DOWNTO 0);  -- Data to   CAEN Local Bus
+      USR_ACCESS  : IN     std_logic;                       -- Current register access is 
+                                                            -- at user address space(Active high)
+      --*************************************************
+      -- V1495 Front Panel Ports (PORT A,B,C,G)
+      --*************************************************
+      A_DIN       : IN     std_logic_vector (31 DOWNTO 0);  -- In A (32 x LVDS/ECL)
+      B_DIN       : IN     std_logic_vector (31 DOWNTO 0);  -- In B (32 x LVDS/ECL) 
+      C_DOUT      : OUT    std_logic_vector (31 DOWNTO 0);  -- Out C (32 x LVDS)
+      G_LEV       : OUT    std_logic;                       -- Output Level Select (NIM/TTL)
+      G_DIR       : OUT    std_logic;                       -- Output Enable
+      G_DOUT      : OUT    std_logic_vector (1 DOWNTO 0);   -- Out G - LEMO (2 x NIM/TTL)
+      G_DIN       : IN     std_logic_vector (1 DOWNTO 0);   -- In G - LEMO (2 x NIM/TTL)
+      --*************************************************
+      -- A395x MEZZANINES INTERFACES (PORT D,E,F)
+      --*************************************************
+      -- Expansion Mezzanine Identifier:
+      -- x_IDCODE :
+      -- 000 : A395A (32 x IN LVDS/ECL)
+      -- 001 : A395B (32 x OUT LVDS)
+      -- 010 : A395C (32 x OUT ECL)
+      -- 011 : A395D (8  x IN/OUT NIM/TTL)
+      
+      -- Expansion Mezzanine Port Signal Standard Select
+      -- x_LEV : 
+      --    0=>TTL,1=>NIM
+
+      -- Expansion Mezzanine Port Direction
+      -- x_DIR : 
+      --    0=>OUT,1=>IN
+
+      -- In/Out D (I/O Expansion)
+      D_IDCODE    : IN     std_logic_vector ( 2 DOWNTO 0);  -- D slot mezzanine Identifier
+      D_LEV       : OUT    std_logic;                       -- D slot Port Signal Level Select 
+      D_DIR       : OUT    std_logic;                       -- D slot Port Direction
+      D_DIN       : IN     std_logic_vector (31 DOWNTO 0);  -- D slot Data In  Bus
+      D_DOUT      : OUT    std_logic_vector (31 DOWNTO 0);  -- D slot Data Out Bus
+      -- In/Out E (I/O Expansion)
+      E_IDCODE    : IN     std_logic_vector ( 2 DOWNTO 0);  -- E slot mezzanine Identifier
+      E_LEV       : OUT    std_logic;                       -- E slot Port Signal Level Select
+      E_DIR       : OUT    std_logic;                       -- E slot Port Direction
+      E_DIN       : IN     std_logic_vector (31 DOWNTO 0);  -- E slot Data In  Bus
+      E_DOUT      : OUT    std_logic_vector (31 DOWNTO 0);  -- E slot Data Out Bus
+      -- In/Out F (I/O Expansion)
+      F_IDCODE    : IN     std_logic_vector ( 2 DOWNTO 0);  -- F slot mezzanine Identifier
+      F_LEV       : OUT    std_logic;                       -- F slot Port Signal Level Select
+      F_DIR       : OUT    std_logic;                       -- F slot Port Direction
+      F_DIN       : IN     std_logic_vector (31 DOWNTO 0);  -- F slot Data In  Bus
+      F_DOUT      : OUT    std_logic_vector (31 DOWNTO 0);  -- F slot Data Out Bus
+      --*************************************************
+      -- DELAY LINES
+      --*************************************************
+      -- PDL = Programmable Delay Lines  (Step = 0.25ns / FSR = 64ns)
+      -- DLO = Delay Line Oscillator     (Half Period ~ 10 ns)
+      -- 3D3428 PDL (PROGRAMMABLE DELAY LINE) CONFIGURATION
+      PDL_WR      : OUT    std_logic;                       -- Write Enable
+      PDL_SEL     : OUT    std_logic;                       -- PDL Selection (0=>PDL0, 1=>PDL1)
+      PDL_READ    : IN     std_logic_vector ( 7 DOWNTO 0);  -- Read Data
+      PDL_WRITE   : OUT    std_logic_vector ( 7 DOWNTO 0);  -- Write Data
+      PDL_DIR     : OUT    std_logic;                       -- Direction (0=>Write, 1=>Read)
+      -- DELAY I/O
+      PDL0_OUT    : IN     std_logic;                       -- Signal from PDL0 Output
+      PDL1_OUT    : IN     std_logic;                       -- Signal from PDL1 Output
+      DLO0_OUT    : IN     std_logic;                       -- Signal from DLO0 Output
+      DLO1_OUT    : IN     std_logic;                       -- Signal from DLO1 Output
+      PDL0_IN     : OUT    std_logic;                       -- Signal to   PDL0 Input
+      PDL1_IN     : OUT    std_logic;                       -- Signal to   PDL1 Input
+      DLO0_GATE   : OUT    std_logic;                       -- DLO0 Gate (active high)
+      DLO1_GATE   : OUT    std_logic;                       -- DLO1 Gate (active high)
+      --*************************************************
+      -- SPARE PORTS
+      --*************************************************
+      SPARE_OUT    : OUT   std_logic_vector(11 downto 0);   -- SPARE Data Out 
+      SPARE_IN     : IN    std_logic_vector(11 downto 0);   -- SPARE Data In
+      SPARE_DIR    : OUT   std_logic_vector(11 downto 0);   -- SPARE Direction (0 => OUT, 1 => IN)   
+      --*************************************************
+      -- LED
+      --*************************************************
+      RED_PULSE       : OUT    std_logic;                   -- RED   Led Pulse (active high)
+      GREEN_PULSE     : OUT    std_logic                    -- GREEN Led Pulse (active high)
+   );
+
+-- Declarations
+
+END scal_reference ;
+
+ARCHITECTURE rtl OF scal_reference IS
+
+
+-- Registers
+signal A_MASK     : std_logic_vector(31 downto 0) := (others => '1'); -- R/W, Mask register of A that enables specific channels
+signal B_MASK     : std_logic_vector(31 downto 0) := (others => '1'); -- R/W, Mask register of B that enables specific channels
+signal D_MASK     : std_logic_vector(31 downto 0) := (others => '1'); -- R/W, Mask register of D that enables specific channels
+signal E_MASK     : std_logic_vector(31 downto 0) := (others => '1'); -- R/W, Mask register of E that enables specific channels
+signal SCRATCH    : std_logic_vector(15 downto 0) := X"BEEF"; -- R/W, Test R/W register
+signal SCALAR_EN  : std_logic := '0'; --R/W register, Active high enables counter, when low the counter does not count 
+signal SCALAR_RES : std_logic := '0'; -- 2 clock cycle long reset
+signal SCALAR_RES_TEMP : std_logic := '0'; --R/W register, Resets scalers to 0 and configure registers to default
+
+signal ASCAL      : arr(0 to 31) := (others => (others => '0')); --R, Stores the count of input pulses from A 
+
+-- Local Signals
+signal A     : std_logic_vector(31 downto 0); --A_DIN after mask
+signal B     : std_logic_vector(31 downto 0);
+signal D   : std_logic_vector(31 downto 0);
+signal E   : std_logic_vector(31 downto 0);
+
+--Scaler General component----Ethan Hazelton 
+
+component scalar_general is
+  generic(
+	 ch_num : integer := 32
+  );
+  port (
+    clk        : in std_logic;
+    asyn_rst   : in std_logic;
+    enable     : in std_logic;
+ 
+    pulse_vec      : in  std_logic_vector(ch_num -1 downto 0);
+    count_data_arr : out  arr(0 to ch_num - 1)
+ 
+    );
+end component;
+
+--Pulse stretcher component ---------------------------------------
+
+component Pulse_stretcher is
+	generic(
+		ch_num0 : integer := 32
+	);
+	port(
+		clk       : in std_logic;
+		pulse_in  : in std_logic_vector(ch_num0 - 1 downto 0);
+		pulse_out : out std_logic_vector(ch_num0 - 1 downto 0)
+	);
+end component;
+
+BEGIN
+  --*************************************************
+   -- SCALER IMPLEMENTATION -- ETHAN HAZELTON
+   --*************************************************
+   
+	A0: scalar_general
+		port map (
+			clk => LCLK,
+			asyn_rst => SCALAR_RES,
+			enable => SCALAR_EN,
+			pulse_vec => A,
+			count_data_arr => ASCAL
+		);
+	
+   --*************************************************
+   -- LED PULSES
+   --*************************************************
+   RED_PULSE   <= '0';
+   GREEN_PULSE <= '1';
+
+   --*************************************************
+   -- PORT SIGNAL STANDARD SELECTION                             
+   --*************************************************
+   -- Ports D,E,F,G signal standard set by register.
+   D_LEV <= '0'; --TTL
+   E_LEV <= '0'; --TTL
+   
+
+   --*************************************************
+   -- PORT DIRECTION
+   --*************************************************
+   -- Ports D,E,F,G set by register.
+   D_DIR  <= '1'; --Input
+   E_DIR  <= '1'; --Input 
+	
+
+   --*************************************************
+   -- PORT G DIRECTION & LEVEL
+   --*************************************************   
+   -- Port G direction is not user controllable
+   -- because we want port G to be used as a GATE output.
+   -- G_CONTROL register could be used to control port G
+   -- direction.
+   G_LEV <= '1'; --NIM('1') signal on output port, TTL = '0'
+   G_DIR <= '0'; -- Port G is Output only ('0' = output, '1' = input)
+
+   --*************************************************
+   -- GATE ON EXTERNAL CONNECTOR   
+   --*************************************************
+   -- G0 is driven by the scalar enable 
+   -- G1 is driven by the scalar reset 
+   G_DOUT(0)  <= SCALAR_EN;
+   G_DOUT(1)  <= SCALAR_RES;
+	
+	--*************************************************
+	--MASKING
+   --*************************************************
+	A <= A_DIN and A_MASK;
+	
+
+   --********************************************************************************
+   -- USER REGISTERS SECTION
+   --********************************************************************************
+	
+	-- setup 2 clock cycle long reset signal for scalar
+	-- Port map that uses pulse stretcher to create pulse for SCALAR_RES
+	P0: Pulse_stretcher
+		generic map(
+			ch_num0 => 1
+		)
+		port map (
+			clk => LCLK,
+			pulse_in(0) => SCALAR_RES_TEMP,
+			pulse_out(0) => SCALAR_RES
+		);
+	
+	
+	
+   -- WRITE REGISTERS
+   P_WREG : process(LCLK, nLBRES)
+   begin
+      if (nLBRES = '0') then
+         A_MASK       <= X"FFFFFFFF"; -- Default : Unmasked
+         B_MASK       <= X"FFFFFFFF"; -- Default : Unmasked
+			D_MASK       <= X"FFFFFFFF"; -- Default : Unmasked
+         E_MASK       <= X"FFFFFFFF"; -- Default : Unmasked
+
+         SCRATCH      <= X"BEEF";
+         
+       elsif LCLK'event and LCLK = '1' then
+         if (REG_WREN = '1') and (USR_ACCESS = '1') then
+           case REG_ADDR is
+             when A_AMASK_L   => A_MASK(15 downto 0)      <= REG_DIN;
+             when A_AMASK_H   => A_MASK(31 downto 16)     <= REG_DIN;
+             when A_BMASK_L   => B_MASK(15 downto 0)      <= REG_DIN;
+             when A_BMASK_H   => B_MASK(31 downto 16)     <= REG_DIN;
+				 when A_DMASK_L   => D_MASK(15 downto 0)      <= REG_DIN;
+             when A_DMASK_H   => D_MASK(31 downto 16)     <= REG_DIN;
+             when A_EMASK_L   => E_MASK(15 downto 0)      <= REG_DIN;
+             when A_EMASK_H   => E_MASK(31 downto 16)     <= REG_DIN;
+            
+             when A_SCRATCH   => SCRATCH                  <= REG_DIN; 
+				 
+				 when A_SCALAR_EN => SCALAR_EN                <= REG_DIN(0); 
+				 when A_SCALAR_RES => SCALAR_RES_TEMP         <= REG_DIN(0); 
+             
+             when others      => null;
+           end case;
+			else 
+				SCALAR_RES_TEMP <='0'; -- self clears itself after 1 clock cycle
+         end if;
+       end if;
+     end process;
+   
+     
+  -- READ REGISTERS
+  P_RREG: process(LCLK, nLBRES)
+  begin
+       if (nLBRES = '0') then
+         REG_DOUT   <= (others => '0');
+       elsif LCLK'event and LCLK = '1' then
+         if (REG_RDEN = '1') and (USR_ACCESS = '1') then
+           case REG_ADDR is
+			    when A_AMASK_L     => REG_DOUT   <= A_MASK(15 downto 0);
+				 when A_AMASK_H     => REG_DOUT   <= A_MASK(31 downto 16);
+				 when A_BMASK_L     => REG_DOUT   <= B_MASK(15 downto 0);
+				 when A_BMASK_H     => REG_DOUT   <= B_MASK(31 downto 16);
+				 when A_DMASK_L     => REG_DOUT   <= D_MASK(15 downto 0);
+				 when A_DMASK_H     => REG_DOUT   <= D_MASK(31 downto 16);
+				 when A_EMASK_L     => REG_DOUT   <= E_MASK(15 downto 0);
+				 when A_EMASK_H     => REG_DOUT   <= E_MASK(31 downto 16);
+				 
+             when A_SCRATCH     => REG_DOUT   <= SCRATCH; 
+             when A_REVISION    => REG_DOUT   <= REVISION;
+				 when A_SCALAR_EN   => REG_DOUT(15 downto 1) <=(others=>'0'); REG_DOUT(0) <=SCALAR_EN;
+				 
+				 when A_ASCAL_H(0)  => REG_DOUT   <= ASCAL(0)(31 downto 16);
+				 when A_ASCAL_L(0)  => REG_DOUT   <= ASCAL(0)(15 downto 0);
+				 when A_ASCAL_H(1)  => REG_DOUT   <= ASCAL(1)(31 downto 16);
+				 when A_ASCAL_L(1)  => REG_DOUT   <= ASCAL(1)(15 downto 0);
+				 when A_ASCAL_H(2)  => REG_DOUT   <= ASCAL(2)(31 downto 16);
+				 when A_ASCAL_L(2)  => REG_DOUT   <= ASCAL(2)(15 downto 0);
+				 when A_ASCAL_H(3)  => REG_DOUT   <= ASCAL(3)(31 downto 16);
+				 when A_ASCAL_L(3)  => REG_DOUT   <= ASCAL(3)(15 downto 0);
+				 when A_ASCAL_H(4)  => REG_DOUT   <= ASCAL(4)(31 downto 16);
+				 when A_ASCAL_L(4)  => REG_DOUT   <= ASCAL(4)(15 downto 0);
+				 when A_ASCAL_H(5)  => REG_DOUT   <= ASCAL(5)(31 downto 16);
+				 when A_ASCAL_L(5)  => REG_DOUT   <= ASCAL(5)(15 downto 0);
+				 when A_ASCAL_H(6)  => REG_DOUT   <= ASCAL(6)(31 downto 16);
+				 when A_ASCAL_L(6)  => REG_DOUT   <= ASCAL(6)(15 downto 0);
+				 when A_ASCAL_H(7)  => REG_DOUT   <= ASCAL(7)(31 downto 16);
+				 when A_ASCAL_L(7)  => REG_DOUT   <= ASCAL(7)(15 downto 0);
+				 when A_ASCAL_H(8)  => REG_DOUT   <= ASCAL(8)(31 downto 16);
+				 when A_ASCAL_L(8)  => REG_DOUT   <= ASCAL(8)(15 downto 0);
+				 when A_ASCAL_H(9)  => REG_DOUT   <= ASCAL(9)(31 downto 16);
+				 when A_ASCAL_L(9)  => REG_DOUT   <= ASCAL(9)(15 downto 0);
+				 when A_ASCAL_H(10)  => REG_DOUT   <= ASCAL(10)(31 downto 16);
+				 when A_ASCAL_L(10)  => REG_DOUT   <= ASCAL(10)(15 downto 0);
+				 when A_ASCAL_H(11)  => REG_DOUT   <= ASCAL(11)(31 downto 16);
+				 when A_ASCAL_L(11)  => REG_DOUT   <= ASCAL(11)(15 downto 0);
+				 when A_ASCAL_H(12)  => REG_DOUT   <= ASCAL(12)(31 downto 16);
+				 when A_ASCAL_L(12)  => REG_DOUT   <= ASCAL(12)(15 downto 0);
+				 when A_ASCAL_H(13)  => REG_DOUT   <= ASCAL(13)(31 downto 16);
+				 when A_ASCAL_L(13)  => REG_DOUT   <= ASCAL(13)(15 downto 0);
+				 when A_ASCAL_H(14)  => REG_DOUT   <= ASCAL(14)(31 downto 16);
+				 when A_ASCAL_L(14)  => REG_DOUT   <= ASCAL(14)(15 downto 0);
+				 when A_ASCAL_H(15)  => REG_DOUT   <= ASCAL(15)(31 downto 16);
+				 when A_ASCAL_L(15)  => REG_DOUT   <= ASCAL(15)(15 downto 0);
+				 when A_ASCAL_H(16)  => REG_DOUT   <= ASCAL(16)(31 downto 16);
+				 when A_ASCAL_L(16)  => REG_DOUT   <= ASCAL(16)(15 downto 0);
+				 when A_ASCAL_H(17)  => REG_DOUT   <= ASCAL(17)(31 downto 16);
+				 when A_ASCAL_L(17)  => REG_DOUT   <= ASCAL(17)(15 downto 0);
+				 when A_ASCAL_H(18)  => REG_DOUT   <= ASCAL(18)(31 downto 16);
+				 when A_ASCAL_L(18)  => REG_DOUT   <= ASCAL(18)(15 downto 0);
+				 when A_ASCAL_H(19)  => REG_DOUT   <= ASCAL(19)(31 downto 16);
+				 when A_ASCAL_L(19)  => REG_DOUT   <= ASCAL(19)(15 downto 0);
+				 when A_ASCAL_H(20)  => REG_DOUT   <= ASCAL(20)(31 downto 16);
+				 when A_ASCAL_L(20)  => REG_DOUT   <= ASCAL(20)(15 downto 0);
+				 when A_ASCAL_H(21)  => REG_DOUT   <= ASCAL(21)(31 downto 16);
+				 when A_ASCAL_L(21)  => REG_DOUT   <= ASCAL(21)(15 downto 0);
+				 when A_ASCAL_H(22)  => REG_DOUT   <= ASCAL(22)(31 downto 16);
+				 when A_ASCAL_L(22)  => REG_DOUT   <= ASCAL(22)(15 downto 0);
+				 when A_ASCAL_H(23)  => REG_DOUT   <= ASCAL(23)(31 downto 16);
+				 when A_ASCAL_L(23)  => REG_DOUT   <= ASCAL(23)(15 downto 0);
+				 when A_ASCAL_H(24)  => REG_DOUT   <= ASCAL(24)(31 downto 16);
+				 when A_ASCAL_L(24)  => REG_DOUT   <= ASCAL(24)(15 downto 0);
+				 when A_ASCAL_H(25)  => REG_DOUT   <= ASCAL(25)(31 downto 16);
+				 when A_ASCAL_L(25)  => REG_DOUT   <= ASCAL(25)(15 downto 0);
+				 when A_ASCAL_H(26)  => REG_DOUT   <= ASCAL(26)(31 downto 16);
+				 when A_ASCAL_L(26)  => REG_DOUT   <= ASCAL(26)(15 downto 0);
+				 when A_ASCAL_H(27)  => REG_DOUT   <= ASCAL(27)(31 downto 16);
+				 when A_ASCAL_L(27)  => REG_DOUT   <= ASCAL(27)(15 downto 0);
+				 when A_ASCAL_H(28)  => REG_DOUT   <= ASCAL(28)(31 downto 16);
+				 when A_ASCAL_L(28)  => REG_DOUT   <= ASCAL(28)(15 downto 0);
+				 when A_ASCAL_H(29)  => REG_DOUT   <= ASCAL(29)(31 downto 16);
+				 when A_ASCAL_L(29)  => REG_DOUT   <= ASCAL(29)(15 downto 0);
+				 when A_ASCAL_H(30)  => REG_DOUT   <= ASCAL(30)(31 downto 16);
+				 when A_ASCAL_L(30)  => REG_DOUT   <= ASCAL(30)(15 downto 0);
+				 when A_ASCAL_H(31)  => REG_DOUT   <= ASCAL(31)(31 downto 16);
+				 when A_ASCAL_L(31)  => REG_DOUT   <= ASCAL(31)(15 downto 0);
+				 
+				 
+             when others        => REG_DOUT   <= (others => '0');
+           end case;
+         end if;
+       end if;
+     end process;
+    
+   
+END rtl;
+

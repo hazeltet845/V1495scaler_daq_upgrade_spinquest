@@ -1,0 +1,289 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\lorenzon-lab-admin\Desktop\Ethan_Quartus\v1495_firmwares\V1495_Scaler_Firmware\V1495_Scaler_Firmware\FIT\simulation\modelsim
+Eedge_detector
+Z1 w1655240429
+Z2 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z3 8C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/edge_detector.vhd
+Z4 FC:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/edge_detector.vhd
+l0
+L4
+V_h<?U;j1ZcJCVeVZI965i3
+Z5 OV;C;6.5e;42
+31
+Z6 o-93 -work work -O0
+Z7 tExplicit 1
+!s100 PBPJSdMVOoa1m>6a8<7==1
+Aedge_arch
+R2
+DEx4 work 13 edge_detector 0 22 _h<?U;j1ZcJCVeVZI965i3
+l17
+L12
+V>baP0>R7nhUPR3h^WU54j3
+R5
+31
+Z8 Mx1 4 ieee 14 std_logic_1164
+R6
+R7
+!s100 U7Q;;>2?KdKkh5J2GmE`z1
+Epll
+Z9 w1655244400
+R2
+Z10 8C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/pll.vhd
+Z11 FC:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/pll.vhd
+l0
+L42
+VG`><mj839^lahb1=bSX622
+R5
+31
+R6
+R7
+!s100 Oj`YnljB0bSg;4?zI^BBo0
+Asyn
+R2
+DEx4 work 3 pll 0 22 G`><mj839^lahb1=bSX622
+l121
+L51
+VM;^EYJON;jW3R?zLGDSk01
+R5
+31
+R8
+R6
+R7
+!s100 ga0ad[Kf;6Vz[EC6Cbn8<3
+Escal_vme_switch
+Z12 w1654782867
+Z13 DPx4 ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+R2
+Z14 8C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/scal_vme_switch.vhd
+Z15 FC:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/scal_vme_switch.vhd
+l0
+L11
+VlLNM]G_T9M<><F?76D6cS2
+R5
+31
+R6
+R7
+!s100 fDlO]c2O`4CNKWGV6HA]X0
+Aarch
+R13
+R2
+DEx4 work 15 scal_vme_switch 0 22 lLNM]G_T9M<><F?76D6cS2
+l24
+L20
+V2X3J95]8=cACR0dNiR`@33
+R5
+31
+Z16 Mx2 4 ieee 14 std_logic_1164
+Z17 Mx1 4 ieee 11 numeric_std
+R6
+R7
+!s100 ADL30V15FJTYX1Eb=YAVd0
+Escalar32_mult_ch
+Z18 w1655230664
+Z19 DPx4 work 15 v1495scalar_pkg 0 22 TS0NV_m^3aPPI`GEMZX`M2
+Z20 DPx4 ieee 18 std_logic_unsigned 0 22 hEMVMlaNCR^<OOoVNV;m90
+Z21 DPx8 synopsys 10 attributes 0 22 2Q8I4L@H0S1aHEXkjUYDC1
+Z22 DPx4 ieee 14 std_logic_misc 0 22 D2f;@P3IKJA9T^H8HI[9K0
+Z23 DPx4 ieee 15 std_logic_arith 0 22 GJbAT?7@hRQU9IQ702DT]2
+R2
+Z24 8C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/scalar32_mult_ch.vhd
+Z25 FC:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/scalar32_mult_ch.vhd
+l0
+L18
+V[?SBP2bj:CM:D`2l`V[V90
+R5
+31
+R6
+R7
+!s100 M7IC8JZDjg?]ZVN0g2JV81
+Ascalar_log
+R19
+R20
+R21
+R22
+R23
+R2
+DEx4 work 16 scalar32_mult_ch 0 22 [?SBP2bj:CM:D`2l`V[V90
+l47
+L32
+V[o_^fbRiAlZT`GEYhjYdm3
+R5
+31
+Mx6 4 ieee 14 std_logic_1164
+Mx5 4 ieee 15 std_logic_arith
+Mx4 4 ieee 14 std_logic_misc
+Mx3 8 synopsys 10 attributes
+Mx2 4 ieee 18 std_logic_unsigned
+Z26 Mx1 4 work 15 v1495scalar_pkg
+R6
+R7
+!s100 V<46H4JYY?3[<;?GI4M]63
+Escalar_single_ch
+Z27 w1655242346
+R19
+R13
+R2
+Z28 8C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/scalar_single_ch.vhd
+Z29 FC:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/scalar_single_ch.vhd
+l0
+L15
+Vm00eG66cAMOigTi8?Eo@Y3
+R5
+31
+R6
+R7
+!s100 hRd=^_E8Kh=@?LPQ3ZVLz3
+Ascalar_log
+R19
+R13
+R2
+DEx4 work 16 scalar_single_ch 0 22 m00eG66cAMOigTi8?Eo@Y3
+l42
+L28
+V@FjYk@e3SbjgnmA@XE^f^3
+R5
+31
+Z30 Mx3 4 ieee 14 std_logic_1164
+Mx2 4 ieee 11 numeric_std
+R26
+R6
+R7
+!s100 :oD8jP8@Te=6ZL[_QBR8B3
+Espill_state
+Z31 w1654801323
+R13
+R2
+Z32 8C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/spill_state.vhd
+Z33 FC:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/spill_state.vhd
+l0
+L15
+Vco576cQ?ZK2JNIcN0KdY:2
+R5
+31
+R6
+R7
+!s100 ]f?HDk3I8oKVeJkWZzCdK1
+Aarch
+R13
+R2
+DEx4 work 11 spill_state 0 22 co576cQ?ZK2JNIcN0KdY:2
+l33
+L24
+VhiHHPL4g2_LN87MM2H>YE0
+R5
+31
+R16
+R17
+R6
+R7
+!s100 dC5mXMPooI4<;337?M2PU3
+Etristate_if
+Z34 w1259011196
+R23
+R2
+Z35 8C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/tristate_if_rtl.vhd
+Z36 FC:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/tristate_if_rtl.vhd
+l0
+L21
+V>lg39P]TRPO^TXg^:K[0U2
+R5
+31
+R6
+R7
+!s100 ;V5cU8WnMn9c1Kz0n6agS3
+Artl
+R23
+R2
+DEx4 work 11 tristate_if 0 22 >lg39P]TRPO^TXg^:K[0U2
+l64
+L63
+V6NEEH[KkESehdKl6VKc@=1
+R5
+31
+R16
+Z37 Mx1 4 ieee 15 std_logic_arith
+R6
+R7
+!s100 >WBHjXURc9>fEdzJQBaKI3
+Ev1495_reference
+w1655302589
+R19
+R21
+R22
+R20
+R23
+R2
+8C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd
+FC:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd
+l0
+L31
+V;]@dNCbC56aFdI]hP;GcW3
+!s100 SekKQKS[og1H^4^XJnCcT2
+R5
+31
+R6
+R7
+Pv1495scalar_pkg
+R2
+Z38 w1654803531
+Z39 8C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495scalar_pkg.vhd
+Z40 FC:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495scalar_pkg.vhd
+l0
+L21
+VTS0NV_m^3aPPI`GEMZX`M2
+R5
+31
+b1
+R8
+R6
+R7
+!s100 0`OBQ`46>CeVGYWf7@Ka_0
+Bbody
+DBx4 work 15 v1495scalar_pkg 0 22 TS0NV_m^3aPPI`GEMZX`M2
+R2
+l0
+L355
+VI?aNmEWPYCjV<=nhQf4kF3
+R5
+31
+R8
+R6
+R7
+nbody
+!s100 4=7Gm<?IR;Y]?nPognTZI0
+Ev1495usr_scalar_project
+Z41 w1653407994
+R2
+Z42 8C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495usr_scalar_project.vhd
+Z43 FC:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495usr_scalar_project.vhd
+l0
+L20
+V]4WZ6j^bEVSVYagJKNUd62
+R5
+31
+R6
+R7
+!s100 GJDJP2eX0BV?JUfVHi2fQ1
+Astruct
+DEx4 work 23 v1495usr_scalar_project 0 22 ]4WZ6j^bEVSVYagJKNUd62
+R20
+R21
+R22
+R23
+R2
+l369
+L74
+VT?fSLFeSg01_J3JTVGLEU2
+R5
+31
+Mx5 4 ieee 14 std_logic_1164
+Mx4 4 ieee 15 std_logic_arith
+Mx3 4 ieee 14 std_logic_misc
+Mx2 8 synopsys 10 attributes
+Mx1 4 ieee 18 std_logic_unsigned
+R6
+R7
+!s100 mPT7dAgfWIAzih]l4c;kG0

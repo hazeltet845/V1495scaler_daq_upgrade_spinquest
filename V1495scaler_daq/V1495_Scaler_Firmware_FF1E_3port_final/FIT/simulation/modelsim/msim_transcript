@@ -1,0 +1,356 @@
+# Reading C:/altera/10.0/modelsim_ase/tcl/vsim/pref.tcl 
+# do v1495usr_scalar_project_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\10.0\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\10.0\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/pll.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5e Compiler 2010.02 Feb 27 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity pll
+# -- Compiling architecture syn of pll
+# vcom -93 -work work {C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/edge_detector.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5e Compiler 2010.02 Feb 27 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity edge_detector
+# -- Compiling architecture edge_arch of edge_detector
+# vcom -93 -work work {C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/scal_vme_switch.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5e Compiler 2010.02 Feb 27 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity scal_vme_switch
+# -- Compiling architecture arch of scal_vme_switch
+# vcom -93 -work work {C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495scalar_pkg.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5e Compiler 2010.02 Feb 27 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling package v1495scalar_pkg
+# -- Compiling package body v1495scalar_pkg
+# -- Loading package v1495scalar_pkg
+# vcom -93 -work work {C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/spill_state.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5e Compiler 2010.02 Feb 27 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Compiling entity spill_state
+# -- Compiling architecture arch of spill_state
+# vcom -93 -work work {C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/tristate_if_rtl.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5e Compiler 2010.02 Feb 27 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity tristate_if
+# -- Compiling architecture rtl of tristate_if
+# vcom -93 -work work {C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495usr_scalar_project.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5e Compiler 2010.02 Feb 27 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Compiling entity v1495usr_scalar_project
+# -- Loading package std_logic_arith
+# -- Loading package attributes
+# -- Loading package std_logic_misc
+# -- Loading package std_logic_unsigned
+# -- Compiling architecture struct of v1495usr_scalar_project
+# vcom -93 -work work {C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/scalar32_mult_ch.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5e Compiler 2010.02 Feb 27 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package attributes
+# -- Loading package std_logic_misc
+# -- Loading package std_logic_unsigned
+# -- Loading package v1495scalar_pkg
+# -- Compiling entity scalar32_mult_ch
+# -- Compiling architecture scalar_log of scalar32_mult_ch
+# vcom -93 -work work {C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/scalar_single_ch.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5e Compiler 2010.02 Feb 27 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package numeric_std
+# -- Loading package v1495scalar_pkg
+# -- Compiling entity scalar_single_ch
+# -- Compiling architecture scalar_log of scalar_single_ch
+# vcom -93 -work work {C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd}
+# Model Technology ModelSim ALTERA vcom 6.5e Compiler 2010.02 Feb 27 2010
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package attributes
+# -- Loading package std_logic_misc
+# -- Loading package v1495scalar_pkg
+# -- Compiling entity v1495_reference
+# -- Compiling architecture rtl of v1495_reference
+# ** Error: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(297): Actual (prefix expression) for formal "bos" is not a globally static expression.
+# ** Error: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(298): Actual (prefix expression) for formal "eos" is not a globally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(442): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(443): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(444): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(445): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(446): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(447): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(448): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(449): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(450): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(451): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(452): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(453): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(454): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(455): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(456): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(457): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(458): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(459): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(460): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(461): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(462): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(463): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(464): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(465): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(466): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(467): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(468): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(469): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(470): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(471): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(472): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(473): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(474): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(475): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(476): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(477): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(478): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(479): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(480): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(481): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(482): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(483): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(484): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(485): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(486): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(487): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(488): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(489): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(490): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(491): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(492): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(493): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(494): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(495): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(496): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(497): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(498): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(499): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(500): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(501): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(502): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(503): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(504): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(505): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(507): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(508): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(509): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(510): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(511): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(512): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(513): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(514): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(515): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(516): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(517): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(518): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(519): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(520): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(521): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(522): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(523): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(524): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(525): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(526): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(527): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(528): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(529): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(530): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(531): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(532): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(533): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(534): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(535): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(536): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(537): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(538): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(539): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(540): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(541): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(542): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(543): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(544): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(545): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(546): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(547): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(548): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(549): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(550): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(551): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(552): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(553): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(554): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(555): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(556): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(557): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(558): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(559): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(560): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(561): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(562): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(563): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(564): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(565): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(566): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(567): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(568): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(569): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(570): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(572): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(573): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(574): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(575): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(576): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(577): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(578): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(579): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(580): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(581): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(582): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(583): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(584): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(585): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(586): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(587): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(588): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(589): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(590): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(591): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(592): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(593): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(594): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(595): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(596): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(597): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(598): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(599): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(600): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(601): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(602): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(603): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(604): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(605): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(606): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(607): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(608): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(609): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(610): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(611): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(612): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(613): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(614): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(615): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(616): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(617): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(618): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(619): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(620): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(621): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(622): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(623): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(624): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(625): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(626): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(627): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(628): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(629): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(630): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(631): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(632): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(633): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(634): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(635): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(637): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(638): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(639): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(640): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(641): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(642): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(643): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(644): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(645): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(646): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(647): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(648): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(649): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(650): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(651): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(652): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(653): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(654): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(655): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(656): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(657): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(658): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(659): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(660): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(661): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(662): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(663): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(664): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(665): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(666): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(667): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(668): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(669): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(670): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(671): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(672): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(673): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(674): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(675): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(676): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(677): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(678): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(679): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(680): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(681): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(682): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(683): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(684): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(685): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(686): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(687): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(688): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(689): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(690): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(691): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(692): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(693): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(694): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(695): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(696): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(697): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(698): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(699): Case choice must be a locally static expression.
+# ** Warning: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(700): Case choice must be a locally static expression.
+# ** Error: C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_code/v1495_reference.vhd(708): VHDL Compiler exiting
+# ** Error: C:/altera/10.0/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./v1495usr_scalar_project_run_msim_rtl_vhdl.do line 17
+# C:/altera/10.0/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -93 -work work {C:/Users/lorenzon-lab-admin/Desktop/Ethan_Quartus/v1495_firmwares/V1495_Scaler_Firmware/V1495_Scaler_Firmware/src/v1495_default_c..."
