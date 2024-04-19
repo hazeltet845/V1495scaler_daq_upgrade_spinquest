@@ -361,7 +361,7 @@ void v1495_roc_scaler__init (rolp)
       }
 }
 /* # 6 "v1495_roc_scaler.c" 2 */
-/* # 1 "/usr/local/coda/2.6.1/common/include/GEN_source.h" 1 */
+/* # 1 "GEN_source.h" 1 */
 static int GEN_handlers,GENflag;
 static int GEN_isAsync;
 static unsigned int *GENPollAddr = ((void *) 0) ;
@@ -369,7 +369,7 @@ static unsigned int GENPollMask;
 static unsigned int GENPollValue;
 static unsigned long GEN_prescale = 1;
 static unsigned long GEN_count = 0;
-/* # 1 "/usr/local/coda/2.6.1/common/include/v1495scaler.h" 1 */
+/* # 1 "v1495scaler.h" 1 */
 struct v1495_control_reg {
   volatile unsigned short scratch;
   volatile unsigned short revision; 
@@ -409,7 +409,7 @@ struct v1495_vme_reg {
   volatile unsigned short scratch16;  
   volatile unsigned int   scratch32;  
 };
-/* # 31 "/usr/local/coda/2.6.1/common/include/GEN_source.h" 2 */
+/* # 31 "GEN_source.h" 2 */
 extern volatile struct v1495_vme_reg* v1495_vreg;
 extern volatile struct v1495_control_reg* v1495_creg;
 void
@@ -673,9 +673,8 @@ __the_event__->nevent = input_event__->nevent; } else { __the_event__->nevent = 
 StartOfEvent[event_depth__++] = (rol->dabufp); if(input_event__) {	*(++(rol->dabufp)) = (( EVTYPE ) << 16) | (( 0x01 ) << 8) | 
 (0xff & (input_event__->nevent));	} else {	*(++(rol->dabufp)) = (syncFlag<<24) | (( EVTYPE ) << 16) 
 | (( 0x01 ) << 8) | (0xff & *(rol->nevents));	}	((rol->dabufp))++;} ; {	long *StartOfBank; StartOfBank = (rol->dabufp); *(++(rol->dabufp)) = ((( EVTYPE ) << 16) | ( 
-0x01 ) << 8) | ( 0 );	((rol->dabufp))++; ;   *rol->dabufp++ = vxTicks;
-  *rol->dabufp++ = 0xe906f005;
-  *rol->dabufp++ = event_no;
+0x01 ) << 8) | ( 0 );	((rol->dabufp))++; ;   *rol->dabufp++ = event_no;
+  *rol->dabufp++ = 0xe906f002;
 { 
 int_counter = (int)v1495IntCount();
   if (event_no != event_no_prev){
@@ -689,53 +688,30 @@ int_counter = (int)v1495IntCount();
    }
    x = int_counter;
   }
-  *rol->dabufp++ = int_counter;
-  *rol->dabufp++ = 0xe906f005;
-  *rol->dabufp++ = event_ty;
   loop = Loop_determine();
   loop2 = Loop_determine();
   loop3 = Loop_determine();
   loop4 = Loop_determine();
   loop5 = Loop_determine();
   if (event_ty == 1 ) {
-   *rol->dabufp++ = 0xAAAAAAAA;
-   *rol->dabufp++ = 0xAAAAAAAA;
-   *rol->dabufp++ = 0xAAAAAAAA;
-   *rol->dabufp++ = 0xAAAAAAAA;
+   *rol->dabufp++ = 0x08010000;
    for(j = 48; j < 64; j+=2){
     *rol->dabufp++ = v1495ScalerCodaRead(1,j);
    }
   }else if(event_ty = 2){
-   *rol->dabufp++ = 0xAAAAAAAA;
-   *rol->dabufp++ = 0xAAAAAAAA;
-   *rol->dabufp++ = 0xAAAAAAAA;
-   *rol->dabufp++ = 0xAAAAAAAA;
+   *rol->dabufp++ = 0x08020000;
    for(j = 0; j < 64; j+=2){
     *rol->dabufp++ = v1495ScalerCodaRead(1,j);
    }
-   *rol->dabufp++ = 0xBBBBBBBB;
-   *rol->dabufp++ = 0xBBBBBBBB;
-   *rol->dabufp++ = 0xBBBBBBBB;
-   *rol->dabufp++ = 0xBBBBBBBB;
+   *rol->dabufp++ = 0x08030000;
    for(j = 0; j < 64; j+=2){
     *rol->dabufp++ = v1495ScalerCodaRead(2,j);
    }
-   *rol->dabufp++ = 0xDDDDDDDD;
-   *rol->dabufp++ = 0xDDDDDDDD;
-   *rol->dabufp++ = 0xDDDDDDDD;
-   *rol->dabufp++ = 0xDDDDDDDD;
+   *rol->dabufp++ = 0x08040000;
    for(j = 0; j < 64; j+=2){
     *rol->dabufp++ = v1495ScalerCodaRead(3,j);
    }
-   *rol->dabufp++ = 0xEEEEEEEE;
-   *rol->dabufp++ = 0xEEEEEEEE; 
-   *rol->dabufp++ = 0xEEEEEEEE;
-   *rol->dabufp++ = 0xEEEEEEEE;
-   for(j = 0; j < 64; j+=2){
-    *rol->dabufp++ = v1495ScalerCodaRead(4,j);
-   }
   }
-  *rol->dabufp++ =0xe906c0da; 
  } 
 *StartOfBank = (long) (((char *) (rol->dabufp)) - ((char *) StartOfBank));	if ((*StartOfBank 
 & 1) != 0) { (rol->dabufp) = ((long *)((char *) (rol->dabufp))+1); *StartOfBank += 1; }; if 

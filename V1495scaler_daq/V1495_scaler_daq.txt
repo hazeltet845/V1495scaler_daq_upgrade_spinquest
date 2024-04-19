@@ -4,6 +4,9 @@
 #sc4
 $gei(0,0)e1039sc4.sq.pri:/home/e1039daq/tftpboot/vx5500_v5 e=192.168.24.151:ffffff00 h=192.168.24.9 g=192.168.24.9 u=e1039daq f=0x20 tn=e906vmesa s=/home/e1039daq/tftpboot/roc6_5500_sc.boot
 
+# 6100
+$geisc(0,0)e1039sc4.sq.pri:/home/e1039daq/tftpboot/vx6100_v4.1 e=192.168.24.151:ffffff00 h=192.168.24.9 g=192.168.24.9 u=e1039daq f=0x20 tn=e906vmesa s=/home/e1039daq/tftpboot/roc6_6100_sc.boot
+
 
 #V1495 Firmware 
 
@@ -11,6 +14,8 @@ $gei(0,0)e1039sc4.sq.pri:/home/e1039daq/tftpboot/vx5500_v5 e=192.168.24.151:ffff
 x=0;sysBusToLocalAdrs(0x39,0x04200000,&x);v1495firmware(x,"/home/e1039daq/V1495scaler_daq/v1495acc_em_100_FF05.rbf",0,0) 
     
 x=0;sysBusToLocalAdrs(0x39,0x04000000,&x);v1495firmware(x,"/home/e1039daq/V1495scaler_daq/v1495usr_scaler_FF1E_daq.rbf",0,0) 
+
+x=0;sysBusToLocalAdrs(0x39,0x04000000,&x);v1495firmware(x,"/home/e1039daq/V1495scaler_daq/V1495VME_rev_1.7.rbf",0,1) 
 
 x=0;sysBusToLocalAdrs(0x39,0x04000000,&x);
 v1495firmware(x,"/home/e1039daq/V1495scaler_daq/v1495usr_scaler_FF1E_w_emulator.rbf",0,0)

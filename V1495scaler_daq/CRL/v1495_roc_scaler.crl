@@ -90,9 +90,11 @@ begin trigger usrtrig
   //s3610WriteBits(0, 1);
   # log inform "EVTYPE %d",EVTYPE
 
-  *rol->dabufp++ = vxTicks;
-  *rol->dabufp++ = 0xe906f005;
+ // *rol->dabufp++ = vxTicks;
   *rol->dabufp++ = event_no;
+ // *rol->dabufp++ = int_counter; 
+ // *rol->dabufp++ = event_ty;
+  *rol->dabufp++ = 0xe906f002;
 
 %%
   
@@ -112,9 +114,6 @@ int_counter = (int)v1495IntCount();
   }
   
 
-  *rol->dabufp++ = int_counter;
-  *rol->dabufp++ = 0xe906f005;
-  *rol->dabufp++ = event_ty;
   loop = Loop_determine();
   loop2 = Loop_determine();
   loop3 = Loop_determine();
@@ -122,49 +121,30 @@ int_counter = (int)v1495IntCount();
   loop5 = Loop_determine();
 
   if (event_ty == 1 ) {
-   *rol->dabufp++ = 0xAAAAAAAA;
-   *rol->dabufp++ = 0xAAAAAAAA;
-   *rol->dabufp++ = 0xAAAAAAAA;
-   *rol->dabufp++ = 0xAAAAAAAA;
+   *rol->dabufp++ = 0x08010000;
    for(j = 48; j < 64; j+=2){
     *rol->dabufp++ = v1495ScalerCodaRead(1,j);
    }
   }else if(event_ty = 2){
-   *rol->dabufp++ = 0xAAAAAAAA;
-   *rol->dabufp++ = 0xAAAAAAAA;
-   *rol->dabufp++ = 0xAAAAAAAA;
-   *rol->dabufp++ = 0xAAAAAAAA;
+   *rol->dabufp++ = 0x08020000;
    for(j = 0; j < 64; j+=2){
     *rol->dabufp++ = v1495ScalerCodaRead(1,j);
    }
 
-   *rol->dabufp++ = 0xBBBBBBBB;
-   *rol->dabufp++ = 0xBBBBBBBB;
-   *rol->dabufp++ = 0xBBBBBBBB;
-   *rol->dabufp++ = 0xBBBBBBBB;
+   *rol->dabufp++ = 0x08030000;
    for(j = 0; j < 64; j+=2){
     *rol->dabufp++ = v1495ScalerCodaRead(2,j);
    }
   
-   *rol->dabufp++ = 0xDDDDDDDD;
-   *rol->dabufp++ = 0xDDDDDDDD;
-   *rol->dabufp++ = 0xDDDDDDDD;
-   *rol->dabufp++ = 0xDDDDDDDD;
+   *rol->dabufp++ = 0x08040000;
    for(j = 0; j < 64; j+=2){
     *rol->dabufp++ = v1495ScalerCodaRead(3,j);
    }
 
-   *rol->dabufp++ = 0xEEEEEEEE;
-   *rol->dabufp++ = 0xEEEEEEEE; 
-   *rol->dabufp++ = 0xEEEEEEEE;
-   *rol->dabufp++ = 0xEEEEEEEE;
-   for(j = 0; j < 64; j+=2){
-    *rol->dabufp++ = v1495ScalerCodaRead(4,j);
-   }
   }
   //*rol->dabufp++ = v1495TDCReadout(ii, jj);
 
-  *rol->dabufp++ =0xe906c0da; 
+  //*rol->dabufp++ =0xe906c0da; 
 %%
 
   close bank
