@@ -299,7 +299,7 @@ begin
 	S29: scal_single_ch
 	port map(
 	clk => clk,
-	input => input_vec(9),
+	input => input_vec(29),
 	reset => reset,
 	enable => enable_r,
 	count_data => count_data_arr(29));
