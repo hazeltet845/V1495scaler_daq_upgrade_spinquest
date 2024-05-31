@@ -309,7 +309,9 @@ constant A_ESCAL_L : A_count_arr(0 to 31) :=
 -- Constants
 
 -- DEMO Revision
-constant REVISION : std_logic_vector(15 downto 0) := X"FF1E"; ---Revision Ethan Hazelton--
+-- constant REVISION : std_logic_vector(15 downto 0) := X"FF1E"; ---Revision Ethan Hazelton--
+--constant REVISION : std_logic_vector(15 downto 0) := X"FF1F"; -- Ievgen => Fixed bug with ch29 readot
+constant REVISION : std_logic_vector(15 downto 0) := X"FF20"; -- Ievgen => Added 100 FLUSH interrupts after EOS event
 
 -- Expansion Mezzanine Type ID-Codes
 constant A395A : std_logic_vector(2 downto 0) := "000"; -- 32CH IN LVDS/ECL INTERFACE
