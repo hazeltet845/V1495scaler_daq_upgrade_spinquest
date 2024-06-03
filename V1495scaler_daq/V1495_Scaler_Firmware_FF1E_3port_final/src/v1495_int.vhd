@@ -23,6 +23,14 @@ signal int_sig  : std_logic := '0';
 signal reg      : std_logic_vector(2 downto 0) := (others => '0');
 signal edge_EOS      : std_logic_vector(8 downto 0) := (others => '0');
 	
+	
+-- FLUSH INterrupt:
+type state_type is (IDLE, PULSE);
+signal state      : state_type := IDLE; -- State of the FSM
+signal count      : integer := 0;       -- Counter for 100 clock pulses
+signal pulse_reg  : std_logic := '0';   -- Register for the pulse output	
+signal flush		: std_logic := '0'; --  Flush interrupt	
+	
 component edge_detector is 
 port(
 	clk   : in std_logic;
@@ -57,12 +65,40 @@ end component clk_divider;
 	
 begin
 
-	
+----------- Flush interrupt:
+	process(clk_KHZ)
+    begin
+		if rising_edge(clk_KHZ) then
+         case state is
+            when IDLE =>
+               pulse_reg <= '0';
+               if EOS = '1' then
+                  state <= PULSE;
+                  count <= 0;
+					end if;
+
+             when PULSE =>
+                pulse_reg <= '1';
+                if count < 100 then
+                   count <= count + 1;
+                else
+                   state <= IDLE;
+                   pulse_reg <= '0';
+                end if;
+          end case;
+        end if;
+    end process;
+
+flush <= pulse_reg;
+
+
+
+---------------- All From Ethan:	
 	process(edge_KHZ, enable, edge_EOS,switch)
 	begin
 		if(switch = '1') then	
-			int_sig <= (edge_KHZ and enable) or edge_EOS(0)  or edge_EOS(2) or edge_EOS(4) or edge_EOS(6) or edge_EOS(8); 
-			--int <= not edge_EOS;
+			--int_sig <= (edge_KHZ and enable) or edge_EOS(0)  or edge_EOS(2) or edge_EOS(4) or edge_EOS(6) or edge_EOS(8); 
+			  int_sig <= (edge_KHZ and enable) or (edge_KHZ and flush);
 		else
 			int_sig <= '1';
 		end if;
